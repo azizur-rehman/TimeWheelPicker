@@ -72,12 +72,12 @@
             android:layout_weight="1"
             android:layout_height="180dp"
             android:layout_gravity="center"
-            app:centerTextColor="@color/hour_text_color"
+            app:centerTextColor="@color/time_picker_hour_text_color"
             app:drawItemCount="7"
             app:initPosition="3"
-            app:lineColor="@color/colorPrimaryDark"
+            app:lineColor="@color/time_picker_hour_line_color"
             app:textSize="32sp"
-            app:topBottomTextColor="@color/hour_text_unselected_color" />
+            app:topBottomTextColor="@color/time_picker_hour_text_unselected_color" />
 
 
         <io.blackbox_vision.wheelview.view.WheelView
@@ -86,12 +86,12 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_height="180dp"
-            app:centerTextColor="@color/minute_text_color"
+            app:centerTextColor="@color/time_picker_minute_text_color"
             app:drawItemCount="7"
             app:initPosition="3"
-            app:lineColor="@color/colorPrimaryDark"
+            app:lineColor="@color/time_picker_minute_line_color"
             app:textSize="32sp"
-            app:topBottomTextColor="@color/minute_text_unselected_color" />
+            app:topBottomTextColor="@color/time_picker_minute_text_unselected_color" />
 
 
         <io.blackbox_vision.wheelview.view.WheelView
@@ -101,12 +101,12 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_height="180dp"
-            app:centerTextColor="@color/am_pm_text_color"
+            app:centerTextColor="@color/time_picker_am_pm_text_color"
             app:drawItemCount="7"
             app:initPosition="3"
-            app:lineColor="@color/colorPrimaryDark"
+            app:lineColor="@color/time_picker_am_pm_line_color"
             app:textSize="32sp"
-            app:topBottomTextColor="@color/am_pm_text_unselected_color" />
+            app:topBottomTextColor="@color/time_picker_am_pm_text_unselected_color" />
 
 
     </LinearLayout>
