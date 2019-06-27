@@ -1,4 +1,4 @@
-# Time Wheel Picker [![](https://jitpack.io/v/azizur-rehman/LinkedInAuth.svg)](https://jitpack.io/#azizur-rehman/LinkedInAuth)
+# Time Wheel Picker [![](https://jitpack.io/v/azizur-rehman/TimeWheelPicker.svg)](https://jitpack.io/#azizur-rehman/TimeWheelPicker)
 
 A Lightweight android library iOS styled timepicker alongwith range for 24 hour time
 
