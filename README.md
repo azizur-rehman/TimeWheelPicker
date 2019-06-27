@@ -89,4 +89,8 @@ Add it in your root build.gradle at the end of repositories:
     <color name="time_picker_hour_line_color">@color/colorAccent</color>
     <color name="time_picker_minute_line_color">@color/colorAccent</color>
     <color name="time_picker_am_pm_line_color">@color/colorAccent</color>
+    
+    
+
+Special Thanks to [BlockBoxVision Material Wheel View](https://github.com/BlackBoxVision/material-wheel-view)
   
