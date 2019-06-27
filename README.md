@@ -6,6 +6,8 @@ Features:
   - Time Range for 24 hours time
   - AM/PM mode
  
+ ## Screenshots
+ <img src="https://github.com/azizur-rehman/TimeWheelPicker/blob/master/cropped_1.png" width="200"> <img src="https://github.com/azizur-rehman/TimeWheelPicker/blob/master/cropped_2.png" width="200">
 
 Step 1. Add the JitPack repository to your build file
 
