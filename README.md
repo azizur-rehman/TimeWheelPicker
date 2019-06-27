@@ -68,9 +68,25 @@ Add it in your root build.gradle at the end of repositories:
 * setCancelText(text: String)
 * setHourTextSize(sizeInPx:Float)
 * setMinuteTextSize(sizeInPx: Float)
-* setHourTextColor(color:Int)
 * setConfirmTextColor(color: Int)
 * setCancelTextColor(color: Int)
 * setTitle(title:String, color:Int = Color.BLACK)
 * setSubtitle(subtitle: String, color:Int = Color.BLACK)
+
+  &nbsp;
+  &nbsp;
+ ## To Change the wheel or line colors, override these values in your color.xml
+    <color name="time_picker_hour_text_color">#000000</color>
+    <color name="time_picker_minute_text_color">#000000</color>
+    <color name="time_picker_am_pm_text_color">#000000</color>
+
+
+    <color name="time_picker_hour_text_unselected_color">#ffafafaf</color>
+    <color name="time_picker_minute_text_unselected_color">#ffafafaf</color>
+    <color name="time_picker_am_pm_text_unselected_color">#ffafafaf</color>
+
+
+    <color name="time_picker_hour_line_color">@color/colorAccent</color>
+    <color name="time_picker_minute_line_color">@color/colorAccent</color>
+    <color name="time_picker_am_pm_line_color">@color/colorAccent</color>
   
