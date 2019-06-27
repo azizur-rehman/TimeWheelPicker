@@ -75,7 +75,7 @@ Add it in your root build.gradle at the end of repositories:
 
   &nbsp;
   &nbsp;
- ## To Change the wheel or line colors, override these values of your own in your color.xml
+ ### To Change the wheel or line colors, override these values of your own in your color.xml
     <color name="time_picker_hour_text_color">#000000</color>
     <color name="time_picker_minute_text_color">#000000</color>
     <color name="time_picker_am_pm_text_color">#000000</color>
