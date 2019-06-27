@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="hour_text_color">#000000</color>
+    <color name="minute_text_color">#000000</color>
+    <color name="am_pm_text_color">#000000</color>
+
+
+    <color name="hour_text_unselected_color">#ffafafaf</color>
+    <color name="minute_text_unselected_color">#ffafafaf</color>
+    <color name="am_pm_text_unselected_color">#ffafafaf</color>
+
+
+    <color name="time_picker_line_color">@color/colorAccent</color>
+
+</resources>

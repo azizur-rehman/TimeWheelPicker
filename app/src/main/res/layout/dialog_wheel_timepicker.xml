@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewHeading"
+            android:text="Cancel"
+            android:padding="0dp"
+            android:id="@+id/cancel"
+            />
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_gravity="center"
+           android:orientation="vertical"
+           android:layout_height="wrap_content">
+           <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewHeading"
+               android:padding="0dp"
+            android:id="@+id/dialog_title"
+            android:layout_gravity="center"
+            />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               style="@style/TextViewHeading"
+               android:padding="0dp"
+               android:id="@+id/dialog_subtitle"
+               android:layout_gravity="center"
+               />
+
+       </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewHeading"
+            android:text="Done"
+            android:padding="0dp"
+            android:id="@+id/done"
+            android:layout_gravity="end"
+            />
+
+    </FrameLayout>
+
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <io.blackbox_vision.wheelview.view.WheelView
+            android:id="@+id/wheel_view_hour"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            app:centerTextColor="@color/hour_text_color"
+            app:drawItemCount="7"
+            app:initPosition="3"
+            app:lineColor="@color/colorPrimaryDark"
+            app:textSize="32sp"
+            app:topBottomTextColor="@color/hour_text_unselected_color" />
+
+
+        <io.blackbox_vision.wheelview.view.WheelView
+            android:id="@+id/wheel_view_minute"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="180dp"
+            app:centerTextColor="@color/minute_text_color"
+            app:drawItemCount="7"
+            app:initPosition="3"
+            app:lineColor="@color/colorPrimaryDark"
+            app:textSize="32sp"
+            app:topBottomTextColor="@color/minute_text_unselected_color" />
+
+
+        <io.blackbox_vision.wheelview.view.WheelView
+            android:id="@+id/wheel_view_am_pm"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="180dp"
+            app:centerTextColor="@color/am_pm_text_color"
+            app:drawItemCount="7"
+            app:initPosition="3"
+            app:lineColor="@color/colorPrimaryDark"
+            app:textSize="32sp"
+            app:topBottomTextColor="@color/am_pm_text_unselected_color" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
