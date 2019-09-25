@@ -1,4 +1,4 @@
-# Time Wheel Picker [![](https://jitpack.io/v/azizur-rehman/LinkedInAuth.svg)](https://jitpack.io/#azizur-rehman/LinkedInAuth)
+# Time Wheel Picker [![](https://jitpack.io/v/azizur-rehman/TimeWheelPicker.svg)](https://jitpack.io/#azizur-rehman/TimeWheelPicker)
 
 A Lightweight android library iOS styled timepicker alongwith range for 24 hour time
 
@@ -6,6 +6,8 @@ Features:
   - Time Range for 24 hours time
   - AM/PM mode
  
+ ## Screenshots
+ <img src="https://github.com/azizur-rehman/TimeWheelPicker/blob/master/cropped_1.png" width="200"> <img src="https://github.com/azizur-rehman/TimeWheelPicker/blob/master/cropped_2.png" width="200">
 
 Step 1. Add the JitPack repository to your build file
 
@@ -89,4 +91,8 @@ Add it in your root build.gradle at the end of repositories:
     <color name="time_picker_hour_line_color">@color/colorAccent</color>
     <color name="time_picker_minute_line_color">@color/colorAccent</color>
     <color name="time_picker_am_pm_line_color">@color/colorAccent</color>
+    
+    
+
+Special Thanks to [BlockBoxVision Material Wheel View](https://github.com/BlackBoxVision/material-wheel-view)
   
