@@ -82,7 +82,16 @@ class TimeWheelPicker {
 
             confirmBtn.setOnClickListener { this.dialog.dismiss()
 
-                onTimePicked?.onPicked(hourList[wheelViewHour.selectedItem].toInt(), minuteList[wheelViewMinute.selectedItem].toInt())
+                var hour = hourList[wheelViewHour.selectedItem].toInt()
+
+                var formattedTime = hourList[wheelViewHour.selectedItem] +":"+ minuteList[wheelViewMinute.selectedItem]
+
+                if(is12Hour) {
+                    formattedTime += " ${if (dialog.wheel_view_am_pm.selectedItem == 0) "AM" else "PM"}"
+                    hour += 11
+                }
+
+                onTimePicked?.onPicked(hour, minuteList[wheelViewMinute.selectedItem].toInt(), formattedTime)
 
             }
 
@@ -186,16 +195,12 @@ class TimeWheelPicker {
 
         fun setEndTime(endHour:Int, endMin:Int):Builder{
 
-            if(is12Hour)
-            {
-                throw IllegalStateException("Time Range is not allowed in 12 hour mode")
-            }
+            check(!is12Hour) { "Time Range is not allowed in 12 hour mode" }
 
             this.endHour = endHour
             this.endMin = endMin
 
-            if(endHour < startHour)
-                throw IllegalStateException("End hour must not be smaller than start hour, start hour = $startHour, end hour = $endHour")
+            check(endHour >= startHour) { "End hour must not be smaller than start hour, start hour = $startHour, end hour = $endHour" }
 
             for (i in endHour+1 ..  23 ){
                 hourList.remove(addFormatter(i) + i.toString())
@@ -279,7 +284,7 @@ class TimeWheelPicker {
 
 
     interface OnTimePicked{
-        fun onPicked(hourOfDay:Int, minute:Int)
+        fun onPicked(hourOfDay:Int, minute:Int, formattedTime:String)
     }
 
 }
