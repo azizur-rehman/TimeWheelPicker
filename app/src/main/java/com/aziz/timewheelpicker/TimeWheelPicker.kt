@@ -88,7 +88,9 @@ class TimeWheelPicker {
 
                 if(is12Hour) {
                     formattedTime += " ${if (dialog.wheel_view_am_pm.selectedItem == 0) "AM" else "PM"}"
-                    hour += 11
+                    if(dialog.wheel_view_am_pm.selectedItem == 1 ) {
+                        hour += 11
+                    }
                 }
 
                 onTimePicked?.onPicked(hour, minuteList[wheelViewMinute.selectedItem].toInt(), formattedTime)
