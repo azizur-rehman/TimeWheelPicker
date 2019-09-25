@@ -87,7 +87,7 @@ class TimeWheelPicker {
                 var hour = hourList[wheelViewHour.selectedItem].toInt()
                 var minute = minuteList[wheelViewMinute.selectedItem].toInt()
 
-                var formattedTime = "$hour:$minute"
+                var formattedTime = "${addFormatter(hour)}:${addFormatter(minute)}"
 
                 if(is12Hour) {
                     formattedTime += " ${if (dialog.wheel_view_am_pm.selectedItem == 0) "AM" else "PM"}"
