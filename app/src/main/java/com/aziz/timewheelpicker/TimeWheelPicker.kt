@@ -11,7 +11,9 @@ import android.widget.TextView
 import io.blackbox_vision.wheelview.view.WheelView
 import kotlinx.android.synthetic.main.dialog_wheel_timepicker.*
 import java.lang.IllegalStateException
-import kotlin.random.Random
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 @SuppressLint("SetTextI18n")
 class TimeWheelPicker {
@@ -83,17 +85,23 @@ class TimeWheelPicker {
             confirmBtn.setOnClickListener { this.dialog.dismiss()
 
                 var hour = hourList[wheelViewHour.selectedItem].toInt()
+                var minute = minuteList[wheelViewMinute.selectedItem].toInt()
 
-                var formattedTime = hourList[wheelViewHour.selectedItem] +":"+ minuteList[wheelViewMinute.selectedItem]
+                var formattedTime = "$hour:$minute"
 
                 if(is12Hour) {
                     formattedTime += " ${if (dialog.wheel_view_am_pm.selectedItem == 0) "AM" else "PM"}"
-                    if(dialog.wheel_view_am_pm.selectedItem == 1 ) {
-                        hour += 11
-                    }
+
+                   val _24hourDate =  SimpleDateFormat("HH:mm", Locale.getDefault())
+                       .format(SimpleDateFormat("hh:mm a", Locale.getDefault()).parse(formattedTime))
+
+                    hour = _24hourDate.split(":")[0].toInt()
+                    minute = _24hourDate.split(":")[1].toInt()
+
+
                 }
 
-                onTimePicked?.onPicked(hour, minuteList[wheelViewMinute.selectedItem].toInt(), formattedTime)
+                onTimePicked?.onPicked(hour, minute , formattedTime)
 
             }
 
